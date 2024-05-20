@@ -1,0 +1,86 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
+}
+
+android {
+    namespace 'com.example.rickandmortiapi'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.rickandmortiapi"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField(
+                "String",
+                "BASE_URL",
+                "\"https://rickandmortyapi.com/api/\""
+        )
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+
+    //navigation
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
+    //id 'kotlin-kapt'
+    implementation libs.androidx.core.ktx.v1120
+
+    // Retrofit
+    implementation libs.converter.gson
+    implementation libs.retrofit
+    //hilt
+    implementation libs.hilt.android
+    kapt libs.hilt.compiler
+    //lotie
+    implementation libs.lottie
+
+    //coil
+    implementation libs.coil
+
+    //carousel
+    implementation libs.carouselrecyclerview
+    implementation libs.okhttp
+    implementation libs.gson
+    //interseptor
+    implementation libs.logging.interceptor
+    implementation libs.picasso
+
+}

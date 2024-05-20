@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_close"
+    tools:context=".UI.fragments.DetailFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/img_character_detail"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_rick"
+                app:layout_collapseMode="parallax" />
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-42dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/gray_close"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tv_human"
+                style="@style/TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/human"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/rickSanchez"
+                android:textAlignment="viewStart"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                style="@style/TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/male1"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/tv_gender"
+                style="@style/TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_title_origin"
+                style="@style/TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/origin"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_origin_dic"
+                style="@style/TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/earth_c_137"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/tv_title_location2"
+                style="@style/TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/location"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tv_location_dic"
+                style="@style/TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/earthy_replacement_dimension"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                style="@style/TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/alive_txt"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_id"
+                style="@style/TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
